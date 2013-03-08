@@ -34,8 +34,12 @@ namespace Dota_Test_Web_API.Models
 
 		private void populateHeroDefinitions()
 		{
-			string heroJson = System.IO.File.ReadAllText(HttpRuntime.AppDomainAppPath + @"Content\Json\heroesSimple.json");
-			heroes = JsonConvert.DeserializeObject<List<Hero>>(heroJson);
+			Heroes temp = new Heroes();
+			string heroJson = new DotaAPI().callHeroApi();
+			
+			temp = JsonConvert.DeserializeObject<Heroes>(heroJson); //only necessary because of valve api formatting
+
+			heroes = temp.result.heroes;
 
 			
 			Hero placeHolder = new Hero(); //valve y u no zero base your heroes?!
