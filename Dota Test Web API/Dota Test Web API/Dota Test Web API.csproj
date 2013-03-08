@@ -123,10 +123,32 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MatchDetailsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AbilityUpgrades.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\DotaAccounts.cs" />
+    <Compile Include="Models\DotaAPI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\Hero.cs" />
+    <Compile Include="Models\HeroDictionary.cs" />
+    <Compile Include="Models\Heroes.cs" />
+    <Compile Include="Models\HeroResult.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemAttribute.cs" />
+    <Compile Include="Models\ItemDictionary.cs" />
+    <Compile Include="Models\MatchDetails.cs" />
+    <Compile Include="Models\MatchDetailsResult.cs" />
+    <Compile Include="Models\MatchHistoryPopulator.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Singleton.cs" />
+    <Compile Include="Models\SteamPlayer.cs" />
+    <Compile Include="Models\SteamPlayerSummaries.cs" />
+    <Compile Include="Models\SteamPlayerSummariesResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -231,10 +253,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Json\heroesSimple.json" />
+    <None Include="Content\Json\itemsPrettified.json" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -251,8 +276,8 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>55293</DevelopmentServerPort>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>55555</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
