@@ -12,7 +12,6 @@ namespace Dota_Test_Web_API.Controllers
 		// GET api/values
 		public IEnumerable<string> Get()
 		{
-			//bla
 			return new string[] { "value1", "value2" };
 		}
 
